@@ -27,3 +27,13 @@ Option __–v__ is to retrieve version info of underlying release.
 
 ### Naming executable
 The name of application has been determined as __calculator__.
+
+## Software Structure
+### src/application
+As shown in the diagram above, we need apply the concept of set, not map, to categorise retrieved records. A package named __application__ has been created under __src/applcaition__ that implements the concept of set, which is not available from inherent Golang packages.
+
+### image
+Contains draphic image.
+
+### requirements
+COntains original requirements document named __requirements.pdf__
