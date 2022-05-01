@@ -20,10 +20,10 @@ A test file named calculator_test.go has been created to cover unit test of func
 This is an option to display loaded CVS records on screen. The option is __–i__.
 
 ### Added Logging to File
-This is an option to log loaded CSV records and summary info into log file. The option is __–l__.
+This is an option to log loaded CSV records and summary info into log file. The option is **–l**.
 
 ### Added option to show version info
-Option __–v__ is to retrieve version info of underlying release.
+Option *__–v__* is to retrieve version info of underlying release.
 
 ### Naming executable
 The name of application has been determined as __calculator__.
@@ -45,8 +45,8 @@ Before building executable code, download zip or clone code by clicking __Code__
 
 ### Build
 Once placing code into desiganted working directory by either cloning it through URL or extracting from downloaded zip file, as stated above, execute following command to build executable code.<br/>
-**go build calculator.go**
+*__go build calculator.go__*
 
 ## Command Syntax
 Issue following command to get better idea of the command syntax - in the case of Win7 environment<br/>
-*__./calculator.exe –help__*
+*__./calculator.exe –help_*
