@@ -50,7 +50,7 @@ Once placing code into desiganted working directory by either cloning it through
 ## Command Syntax
 Issue following command to get better idea of the command syntax - in the case of Win7 environment<br/>
 *__./calculator.exe –help__*
-
+<pre>
   -a string
         application ID (default "374")
   -i string
@@ -66,3 +66,4 @@ Input CSV file is default to sample-small.csv, and can be altered by option –i
 Log file, if option is specified, the log filename will be formed in following convention:
    For the sake of traceability, the calculation output, including summary info, can be collected into log file through option –l. If created, 
    the log’s filename is the following convention: log<YYYY>-<Month>-<Day>_<hh>-<mm>-<ss>.txt, where the datetime code is referring to UTC time.
+</pre>
