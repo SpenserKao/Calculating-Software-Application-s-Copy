@@ -37,3 +37,8 @@ Contains draphic image.
 
 ### requirements
 COntains original requirements document named __requirements.pdf__
+
+## Cloning Code or Download Zip file, and Build
+Before building executable code, download zip or clone code by clicking "Code" at the middle right of Github screen and associated buttons as shown in the screen shot below.<br/>
+![CloneCodeOrDownloadZip](image/CloneCodeOrDownloadZip.png "CloneCodeOrDownloadZip") 
+
