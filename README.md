@@ -44,6 +44,6 @@ Before building executable code, download zip or clone code by clicking __Code__
 ![CloneCodeOrDownloadZip](image/CloneCodeOrDownloadZip.png "CloneCodeOrDownloadZip") 
 
 ### Build
-Once placing code into desiganted working directory by either cloning it through URL or extracting from downloaded zip file, as stated above, execute following command to build executable code.
+Once placing code into desiganted working directory by either cloning it through URL or extracting from downloaded zip file, as stated above, execute following command to build executable code.<br/>
 __go build calculator.go__
 
