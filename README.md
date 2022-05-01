@@ -45,5 +45,8 @@ Before building executable code, download zip or clone code by clicking __Code__
 
 ### Build
 Once placing code into desiganted working directory by either cloning it through URL or extracting from downloaded zip file, as stated above, execute following command to build executable code.<br/>
-__go build calculator.go__
+**go build calculator.go**
 
+## Command Syntax
+Issue following command to get better idea of the command syntax - in the case of Win7 environment<br/>
+*__./calculator.exe –help__*
