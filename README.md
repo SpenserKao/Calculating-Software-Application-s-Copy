@@ -38,7 +38,12 @@ Contains draphic image.
 ### requirements
 COntains original requirements document named __requirements.pdf__
 
-## Cloning Code or Download Zip file, and Build
-Before building executable code, download zip or clone code by clicking "Code" at the middle right of Github screen and associated buttons as shown in the screen shot below.<br/>
+## Setup for Execution
+### Cloning Code or Download Zip file
+Before building executable code, download zip or clone code by clicking __Code__ at the middle right of Github screen and associated buttons as shown in the screen shot below. <br/>
 ![CloneCodeOrDownloadZip](image/CloneCodeOrDownloadZip.png "CloneCodeOrDownloadZip") 
+
+### Build
+Once placing code into desiganted working directory by either cloning it through URL or extracting from downloaded zip file, as stated above, execute following command to build executable code.
+__go build calculator.go__
 
