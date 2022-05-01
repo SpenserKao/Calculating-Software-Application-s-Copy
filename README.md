@@ -5,4 +5,5 @@ As a deliverable to a Coding Test, which is to calculate the total copy of appli
 ## Design
 ### Set Theory
 Following set diagram illustrates philosophy behind the design. In scanning input csv file, only records associated with specified ApplicationID will be retrieved for calculation.
+![Set](image/set.png "Set") 
 Among the retrieved records, there will be further categorisation by UserID. The remainder of criteria of calculation are ComputerID and ComputerType.
