@@ -13,3 +13,17 @@ Initially I have tried reading records were read all at once to memory before be
 As a matter of fact, it’s a trade-off between resources (memory) and performance. Provided memory is unlimited, then loading all records once into memory before parsing and calculation could be ideal. But memory is not unlimited. <br/>
 Hence the adjustment is that up to pre-configured number, which is currently is currently 50, of records are loaded into buffered channel at a time. The buffered channel serves the communication between the process of loading CSV file and main program. With such change, tests indicate that the memory consumption stops peaking to its maximum.
 
+### Added Unit test, Especially on Checking Emptiness of Four of Five Fields
+A test file named calculator_test.go has been created to cover unit test of function ValidRec.
+
+### Added Option to display loaded CVS records
+This is an option to display loaded CVS records on screen. The option is __–i__.
+
+### Added Logging to File
+This is an option to log loaded CSV records and summary info into log file. The option is __–l__.
+
+### Added option to show version info
+Option __–v__ is to retrieve version info of underlying release.
+
+### Naming executable
+The name of application has been determined as __calculator__.
