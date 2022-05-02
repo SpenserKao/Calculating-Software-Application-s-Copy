@@ -90,8 +90,8 @@ Summary -
         Total number of application copy required: 1
         Total execution time: 2.1563ms
 </pre>
-*Expectation: Total number of copy required is 1
-Result: Passed.*
+*Expectation: Total number of copy required is 1*
+*Result: Passed.*
 
 #### Scenario 2
 *__./ calculator -i scenario2.csv -s__*
@@ -108,5 +108,67 @@ Summary -
         Total number of application copy required: 3
         Total execution time: 2.5442ms
 </pre>
-*Expectation: Total number of copy required is 3
-Result: Passed.*
+*Expectation: Total number of copy required is 3*
+*Result: Passed.*
+
+#### Scenario 3
+*__./ calculator -i scenario3.csv -s__*
+<pre>
+1       1       374     LAPTOP  Exported from System A
+2       2       374     DESKTOP Exported from System A
+2       2       374     desktop Exported from System B
+
+Summary -
+        Input Data File: scenario3.csv
+        ApplicationID of valid records to be processed: 374
+        Total number of valid records processed: 3
+        Total number of application copy required: 2
+        Total execution time: 1.8985ms
+</pre>
+*Expectation: Total number of copy required is 2*
+*Result: Passed.*
+
+### Scenario 4
+*__./calculator -i scenario2_invalid.csv -s__*
+<pre>
+1       1       374     LAPTOP  Exported from System A
+2       1       374    Exported from System A
+Any empty ComputerID, UserID, ApplicationID or CompueterType invalidates pertaining record for calculation.
+3       2       374     DESKTOP Exported from System A
+4       2       374     DESKTOP Exported from System A
+
+Summary -
+        Input Data File: scenario2_invalid.csv
+        ApplicationID of valid records to be processed: 374
+        Total number of valid records processed: 3
+        Total number of application copy required: 3
+        Total execution time: 2.1921ms
+</pre>
+
+#### Scenario 5
+*__./calculator -i scenario2_invalid2.csv -s__*
+<pre>
+1       1       374     LAPTOP  Exported from System A
+2       1       374     DESKTOP Exported from System A
+3       2       374     Exported from System A
+Any empty ComputerID, UserID, ApplicationID or CompueterType invalidates pertaining record for calculation.
+4       2       374     DESKTOP Exported from System A
+
+Summary -
+        Input Data File: scenario2_invalid2.csv
+        ApplicationID of valid records to be processed: 374
+        Total number of valid records processed: 3
+        Total number of application copy required: 2
+        Total execution time: 2.3061ms
+</pre>
+
+#### Scenario 6
+*__./calculator__*
+<pre>
+Summary -
+        Input Data File: small-sample.csv
+        ApplicationID of valid records to be processed: 374
+        Total number of valid records processed: 204
+        Total number of application copy required: 186
+        Total execution time: 380.04ms
+</pre>
