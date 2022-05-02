@@ -67,3 +67,46 @@ Issue following command to get better idea of the command syntax - in the case o
         should also show the records' info on screen? (default: false)
   -v version info
 </pre>
+
+## Test
+### Unit Test
+Configured in calculator_test.go, function ValidRec can be unit-tested through command 
+*__go test__* and go *__test –v__*
+The result of both tests show they are passed.
+
+### Integration Test
+Other than two relatively big CSV files, *__small-sample.csv__*, three additional files have also been created as correspondence to three examples described in *__readme.pdf__*. The three additional files are *__scenario1.csv__*, *__scenario2.csv__* and *__scenario3.csv__*. Two more files are created to test invalid records: *__scenario2-invalid.csv__* and *__scenario2-invalid2.csv__*.
+
+#### Scenario 1
+*__./calculator -i scenario1.csv -s__*
+<pre>
+1       1       374     LAPTOP  Exported from System A
+2       1       374     DESKTOP Exported from System A
+
+Summary -
+        Input Data File: scenario1.csv
+        ApplicationID of valid records to be processed: 374
+        Total number of valid records processed: 2
+        Total number of application copy required: 1
+        Total execution time: 2.1563ms
+</pre>
+*Expectation: Total number of copy required is 1
+Result: Passed.*
+
+#### Scenario 2
+*__./ calculator -i scenario2.csv -s__*
+<pre>
+1       1       374     LAPTOP  Exported from System A
+2       1       374     DESKTOP Exported from System A
+3       2       374     DESKTOP Exported from System A
+4       2       374     DESKTOP Exported from System A
+
+Summary -
+        Input Data File: scenario2.csv
+        ApplicationID of valid records to be processed: 374
+        Total number of valid records processed: 4
+        Total number of application copy required: 3
+        Total execution time: 2.5442ms
+</pre>
+*Expectation: Total number of copy required is 3
+Result: Passed.*
