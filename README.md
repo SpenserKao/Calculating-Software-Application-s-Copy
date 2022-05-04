@@ -60,7 +60,7 @@ Once placing code into desiganted working directory by either cloning it through
 
 ## Command Syntax
 Issue following command to get better idea of the command syntax - in the case of Win7 environment<br/>
-*__./calculator.exe –help__*
+*__/bin/calculator.exe –help__*
 <pre>
   -a string
         application ID (default "374")
