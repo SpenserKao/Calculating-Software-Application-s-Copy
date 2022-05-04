@@ -29,11 +29,22 @@ Option *__–v__* is to retrieve version info of underlying release.
 The name of application has been determined as *__calculator__*.
 
 ## Software Structure
-### src/application
+All directories whose filename starts in lower case, such as src, bin and pkg, are prescribed structure as required by Golang converntion.
+Otherwise, they are for application-specific purpose. For instance, Data contains data file of different scenaiors, while Image contains graphic images referred by this README markdown file.
+
+### src
+#### application
 As shown in the diagram above, we need apply the concept of set, not map, to categorise retrieved records. A package named *__application__* has been created under *__src/applcaition__* that implements the concept of set, which is not available from inherent Golang packages.
 
-### image
-Contains draphic image.
+#### calculator
+The main program, *__calculator.go__* to retrieve/process CSV record from input file, followed by calculation.
+Test file *__calculator_test.go__* file is also underheath.
+
+### Data
+Contains all data files of different scenarios.
+
+### Image
+Contains graphic images referred by this README markdown file.
 
 ### requirements
 COntains original requirements document named *__requirements.pdf__*
@@ -75,10 +86,11 @@ Configured in calculator_test.go, function ValidRec can be unit-tested through c
 The result of both tests show they are passed.
 
 ### Integration Test
-Other than two relatively big CSV files, *__small-sample.csv__*, three additional files have also been created as correspondence to three examples described in *__readme.pdf__*. The three additional files are *__scenario1.csv__*, *__scenario2.csv__* and *__scenario3.csv__*. Two more files are created to test invalid records: *__scenario2-invalid.csv__* and *__scenario2-invalid2.csv__*.
+Other than two relatively big CSV files, *__small-sample.csv__*, three additional files have also been created as correspondence to three examples described in *__readme.pdf__*. The three additional files are *__scenario1.csv__*, *__scenario2.csv__* and *__scenario3.csv__*. Two more files are created to test invalid records: *__scenario2-invalid.csv__* and *__scenario2-invalid2.csv__*. All of them are placed under folder *__Data__*.
+To start the test, go to working directory.
 
 #### Scenario 1
-*__./calculator -i scenario1.csv -s__*
+*__bin/calculator.exe -i Data/scenario1.csv -s__*
 <pre>
 1       1       374     LAPTOP  Exported from System A
 2       1       374     DESKTOP Exported from System A
@@ -94,7 +106,7 @@ Summary -
 *Result: Passed.*
 
 #### Scenario 2
-*__./ calculator -i scenario2.csv -s__*
+*__bin/calculator.exe -i Data/scenario2.csv -s__*
 <pre>
 1       1       374     LAPTOP  Exported from System A
 2       1       374     DESKTOP Exported from System A
@@ -112,7 +124,7 @@ Summary -
 *Result: Passed.*
 
 #### Scenario 3
-*__./ calculator -i scenario3.csv -s__*
+*__bin/calculator.exe -i Data/scenario3.csv -s__*
 <pre>
 1       1       374     LAPTOP  Exported from System A
 2       2       374     DESKTOP Exported from System A
@@ -129,7 +141,7 @@ Summary -
 *Result: Passed.*
 
 ### Scenario 4
-*__./calculator -i scenario2_invalid.csv -s__*
+*__bin/calculator.exe -i Data/scenario2_invalid.csv -s__*
 <pre>
 1       1       374     LAPTOP  Exported from System A
 2       1       374    Exported from System A
@@ -146,7 +158,7 @@ Summary -
 </pre>
 
 #### Scenario 5
-*__./calculator -i scenario2_invalid2.csv -s__*
+*__bin/calculator.exe -i Data/scenario2_invalid2.csv -s__*
 <pre>
 1       1       374     LAPTOP  Exported from System A
 2       1       374     DESKTOP Exported from System A
@@ -163,7 +175,7 @@ Summary -
 </pre>
 
 #### Scenario 6
-*__./calculator__*
+*__bin/calculator.exe__*
 <pre>
 Summary -
         Input Data File: small-sample.csv
