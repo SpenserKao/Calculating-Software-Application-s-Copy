@@ -5,7 +5,7 @@ As a deliverable to a Coding Test, which is to calculate the total copy of appli
 ## Design
 ### Set Theory
 Following set diagram illustrates philosophy behind the design. In scanning input CSV file, only records associated with specified ApplicationID will be retrieved for calculation.
-![Set](image/set.png "Set") 
+![Set](Image/set.png "Set") 
 Among the retrieved records, there will be further categorisation by UserID. The remainder of criteria of calculation are ComputerID and ComputerType.
 
 ### Approach of Reading Records - All into memory or one at a time
@@ -52,7 +52,7 @@ COntains original requirements document named *__requirements.pdf__*
 ## Setup for Execution
 ### Cloning Code or Download Zip file
 Before building executable code, download zip or clone code by clicking *__Code__* at the middle right of Github screen and associated buttons as shown in the screen shot below. <br/>
-![CloneCodeOrDownloadZip](image/CloneCodeOrDownloadZip.png "CloneCodeOrDownloadZip") 
+![CloneCodeOrDownloadZip](Image/CloneCodeOrDownloadZip.png "CloneCodeOrDownloadZip") 
 
 ### Build
 Once placing code into desiganted working directory by either cloning it through URL or extracting from downloaded zip file, as stated above, execute following command to build executable code.<br/>
